@@ -19,7 +19,7 @@ class DriveDataset(Dataset):
         img_names = [i for i in os.listdir(os.path.join(data_root, "all_images")) if i.endswith(".jpg")]
         self.img_list = [os.path.join(data_root, "all_images", i) for i in img_names]
         mask_names = [i for i in os.listdir(os.path.join(data_root, "all_manual")) if i.endswith(".bmp")]
-        self.mask_list = [os.path.join(data_root, "all_manual", i.split(".")[0]+".bmp") for i in img_names]
+        self.mask_list = [os.path.join(data_root, "all_manual", i.split(".")[0]+".bmp") for i in mask_names]
         # self.manual = [os.path.join(data_root, "1st_manual", i.split("_")[0] + "_manual1.gif")
         #                for i in img_names]
         # # check files
